@@ -1,0 +1,102 @@
+<head>
+	  <title>Javascript 解码</title>
+    <!-- 演示用css，非组件依赖 -->
+    <link href='http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.css' rel='stylesheet'>
+    
+<script src="http://cstaticdun.126.net/load.min.js"></script>
+<script src="http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/scripts/jquery-1.7.1.min.js"></script>
+<script src="http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/scripts/jquery.easing-1.3.js"></script>
+
+    
+</head>
+<script> 
+a=62; 
+function encode() { 
+var code = document.getElementById('code').value; 
+code = code.replace(/[\r\n]+/g, ''); 
+code = code.replace(/'/g, "\\'"); 
+var tmp = code.match(/\b(\w+)\b/g); 
+tmp.sort(); 
+var dict = []; 
+var i, t = ''; 
+for(var i=0; i<tmp.length; i++) { 
+if(tmp[i] != t) dict.push(t = tmp[i]); 
+} 
+var len = dict.length; 
+var ch; 
+for(i=0; i<len; i++) { 
+ch = num(i); 
+code = code.replace(new RegExp('\\b'+dict[i]+'\\b','g'), ch); 
+if(ch == dict[i]) dict[i] = ''; 
+} 
+document.getElementById('code').value = "eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c]);return p}(" 
++ "'"+code+"',"+a+","+len+",'"+ dict.join('|')+"'.split('|'),0,{}))"; 
+} 
+
+function num(c) { 
+return(c<a?'':num(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36)); 
+} 
+
+function run() { 
+eval(document.getElementById('code').value); 
+} 
+
+function decode() { 
+var code = document.getElementById('code').value; 
+code = code.replace(/^eval/, ''); 
+document.getElementById('code').value = eval(code); 
+} 
+
+function tta()
+{
+}
+
+</script> 
+
+
+<textarea id=code cols=80 rows=20> 
+
+</textarea><br> 
+<input type=button onclick=encode() value=编码> 
+<input type=button onclick=run() value=执行> 
+<input type=button onclick=decode() value=解码> 
+
+<input type=button onclick=tta() value=测试> 
+
+<p><p>
+	
+<p>	
+<form style="max-width: 320px; margin: 120px auto;" action="/login" method="post">
+    <h2>易盾验证码</h2>
+    <input type="text" class="form-control" name="username" placeholder="账号" /><br></br>
+    <input type="password" class="form-control" name="password" placeholder="密码" /><br></br>
+    <div style="margin: 10px auto;" id="sendhouse_div"></div> <!-- 验证码容器元素定义 -->
+    <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit-btn">登录</button>
+</form>
+<script> // 验证码组件初始化
+captchaId3 = "9ae903e15c784c5999981d7f45e52afa";	
+var ins;
+var opts = {
+    captchaId: captchaId3,
+    element: '#sendhouse_div',
+    mode: 'embed',
+    width: '320px',
+    onReady: function (instance) {
+        ins = instance;
+    },
+    onVerify: function (err, ret) {
+        if (err == null) {
+            if (ret['validate']) { // true:验证通过 false:验证失败
+                var validate = ret['validate'];
+                //getinfobyid(cwnum, ckeypwd, validate);// 用户完成拖动之后再启用提交按钮
+            }
+        }
+        else {
+           
+            //initNECaptcha(opts, function onload(instance) { ins = instance; }, function onerror(err) { window.location.reload(); });
+        }
+
+    },
+};
+</script>
+

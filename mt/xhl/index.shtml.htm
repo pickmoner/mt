@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+                       (0 0)
+   +-------------oOO----(_)----------------+
+   |   Powered By Matrix - www.juzhen.com  |
+   |   Tel:027-83557163 83557165           |
+   |   Creation:2015.01                    |
+   +--------------------------oOO----------+
+                      |__|__|
+                       || ||
+                      ooO Ooo
+-->
+<title>网上开盘-新华联-青年城</title>
+<style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,select,input,textarea,button,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table, caption,tbody,tfoot,thead,tr,th,td,article, aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0; padding:0; border:0; vertical-align:baseline;list-style-type:none;}
+.EntranceMain{width:1440px; height:670px; position:absolute; left:50%; top:50%; margin:-335px 0 0 -720px;}
+.EntranceMain img{display:block; width:100%; height:100%;}
+.EntranceMain h1{width:400px; height:60px; line-height:60px; text-align:center; background:rgba(255,255,255,0.9); border-radius:5px; color:#000; position:absolute; left:50%; font-size:24px; top:20px; margin-left:-200px;}
+</style>
+</head>
+<body>
+    <div class="EntranceMain">
+     <img src="inbg.jpg" tppabs="http://www.kaipan01.cn/plmnhytf12f3/309/inbg.jpg">
+     <h1 id="msg"></h1>
+        </div>
+</body>
+<script src="jquery-1.7.1.min-1.js" tppabs="http://www.kaipan01.cn/Public/js/jquery-1.7.1.min.js"></script>
+<script src="MatrixHelp-1.js" tppabs="http://www.kaipan01.cn/Public/js/MatrixHelp.js"></script>
+<script>
+    $(document).ready(function () {
+        getActionurl();
+    });
+    function getActionurl()
+    {
+        var parm = "type=getactionurl";
+
+        AjaxHelp.getdata({ pdebug: false, async: true, pajaxurl: 'http://www.kaipan01.cn/xhl/urlhelp.aspx', Parm: parm }, function (statuback) {
+            if (statuback.state == "-1" || statuback.state == "0" || statuback.state == "2" || statuback.state == "4") {
+                $("#msg").html(statuback.info);
+                setTimeout(getActionurl, 3000);
+                return;
+            }
+            else if (statuback.state == "1" || statuback.state == "3") {
+                window.location = statuback.info;
+            }
+            else {
+                $("#msg").html(statuback.info);
+            }
+        });
+    }
+</script>
+</html>

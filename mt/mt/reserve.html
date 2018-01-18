@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>矩阵</title>
+  <script src="http://cstaticdun.126.net/load.min.js"></script> <!-- 初始化JS -->
+  <script src="script/jquery-3.2.1.min.js"></script> <!-- 初始化JS -->
+  
+</head>
+<body>
+
+        <div style="display:block;width:320px;height:215px;">  
+
+		    <div id="captcha"></div> <!-- 验证码容器元素 -->
+              
+        </div> 
+        
+    
+    
+	<input type="text" id="val"/>
+	
+	<input type="button" value="开始" onclick="ongo()">
+	
+  <script>
+ 	
+  	function ongo()
+  	{
+  		alert('ongo');
+  		$.ajax({
+  			url:'Controller',
+  			type:'POST',
+  			async:true,
+  			data:{type:'Login'},
+  			dataType:'json',
+  			success:function(data)
+  			{
+  				if(data.res)
+  				{
+					alert(data.res);
+					captcha();
+  				}
+  			}
+  		});
+  	}
+  
+  	function captcha()
+  	{
+  		alert('fucntion captcha')
+	    initNECaptcha
+	    (
+	    	{
+	      		captchaId: '9ae903e15c784c5999981d7f45e52afa',
+	      		element: '#captcha',
+	      		mode: 'embed',
+	     		width: '320px',
+	    		onReady:function(instance)
+	    		{
+	    		},
+	    		onVerify:function(error,data)
+	    		{
+					if(data)
+					{
+						$('#val').attr('value',data.validate);
+						
+				  		$.ajax({
+				  			url:'Controller',
+				  			type:'POST',
+				  			async:true,
+				  			data:{type:'Reserve'},
+				  			dataType:'json',
+				  			success:function(data)
+				  			{
+								if(data.res)
+				  				{
+				  					alert(data.res);
+				  				}
+  				  			}
+				  		})
+				
+						
+					}else
+					{
+						alert('error');
+					}
+	    		}
+	    	 },function onload(instance)
+	    	 {
+	    		//alert('onload'); 
+	    	 },function onerror(err)
+	    	 {
+	    		//alert('error')
+	    	 }
+	    )
+  	}
+  
+  </script>
+</body>
+</html>

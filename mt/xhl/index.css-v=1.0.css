@@ -1,0 +1,189 @@
+@charset "utf-8";
+/* CSS Document */
+/*技术支持:武汉矩阵科技-www.juzhen.com*/
+/*公司地址:武汉市江汉区青年路308号花园道写字楼5楼*/
+/*客户服务电话:027-83557163 83557165*/
+@media screen, projection {
+/* 首页 begin */
+body{font-size:12px; font-family:"\9ED1\4F53"; color:#666; background:#fcb800;}
+.foot{height:30px; line-height:30px; color:#2d2d2d; font-size:14px; margin:0 auto; width:1100px; text-align:center;}
+.foot a{color:#b90000;}
+.warp{width:100%; min-width:1440px; overflow:hidden; position:absolute; left:0; top:50%; margin-top:-350px;}
+.InMain{width:1440px; height:700px; position:relative; left:50%; margin-left:-720px; background:#d99003;}
+.InCon{width:1440px; height:670px; position:relative; }
+/* 首页温馨提示 */
+.intips{width:343px; color:#f6eca5; font-size:16px; position:absolute; top:160px; left:62px;}
+.intips p{line-height:20px; padding-bottom:5px;}
+/* 首页导航 */
+.nav{width:785px; height:99px; position:absolute; bottom:20px; right:125px}
+.nav li{width:99px; height:40px; cursor:pointer; float:left; font-size:16px; text-align:center; padding-top:59px; margin-right:15px; color:#fff;}
+.nav li.nav1{background:url("nav1.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/nav1.png*/ no-repeat;}
+.nav li.nav2{background:url("nav2.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/nav2.png*/ no-repeat;}
+.nav li.nav3{background:url("nav3.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/nav3.png*/ no-repeat;}
+.nav li.nav4{background:url("nav4.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/nav4.png*/ no-repeat;}
+.nav li.nav5{background:url("nav5.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/nav5.png*/ no-repeat;}
+.nav li.nav6{background:url("nav6.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/nav6.png*/ no-repeat;}
+.nav li.nav7{background:url("nav1.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/nav1.png*/ no-repeat;}
+.nav li.nav8{background:url("nav1.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/nav1.png*/ no-repeat; margin:0;}
+/* 首页倒计时 */
+.CountDown{width:300px; color:#fff; position:absolute; bottom:20px; left:200px;}
+.CountDown h2{height:40px; font-size:24px;}
+.CountDown .time{height:44px;}
+.CountDown .time p{width:44px; height:44px; display:block; overflow:hidden; color:#9C0202; text-align:center; line-height:44px; border-radius:3px; float:left; background:#fff; font-size:32px;}
+.CountDown .time span{font-size:18px; float:left; display:block; line-height:30px; text-align:center; width:30px; padding-top:10px;}
+/* 首页登录 */
+.LoginBox{height:100px; width:500px; position:absolute; top:0; right:300px;}
+.Loginbegin{width:70px; height:32px; border-radius:0 0 3px 3px; display:; background:#f6eca5; color:#9C0202; position:absolute; right:0; top:0; line-height:32px; text-align:center; font-size:16px; -webkit-transition:all 0.2s; transition:all 0.2s;}
+.Loginbegin:hover{background:#fcb800;}
+.LoginEnd{text-align:right; width:100%; height:40px; padding-top:10px; display:none; line-height:30px; color:#f6eca5; font-size:16px;}
+.LoginEnd a{color:#f6eca5;}
+/* 开始抢购 */
+.buyBtn{width:271px;  position:absolute; z-index:60; left:200px; top:480px;}
+.buying{display:none; background: url("buying.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/buying.png*/ no-repeat; background-size: 100% 100%; text-align: center; line-height: 58px; font-size: 26px; color: #fdedb7; font-family: "\9ED1\4F53"}
+.nobuying{ background: url("nobuying.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/nobuying.png*/ no-repeat; background-size: 100% 100%; text-align: center; line-height: 58px; font-size: 26px; color: #fdedb7; font-family: "\9ED1\4F53"}
+.buyBtn {cursor:pointer;}
+.buyBtn .hand{display:none;left:200px; position:absolute; top:36px; animation:tiao 1s infinite; -webkit-animation:tiao 1s infinite; -moz-animation:tiao 1s infinite; -o-animation:tiao 1s infinite}
+@keyframes tiao{
+	0%{ transform:translate(0,0)}
+	50%{ transform:translate(-30px,-30px)}
+	100%{ transform:translate(0,0)}
+}
+@-webkit-keyframes tiao{
+	0%{ -webkit-transform:translate(0,0)}
+	50%{ -webkit-transform:translate(-30px,-30px)}
+	100%{ -webkit-transform:translate(0,0)}
+}
+@-moz-keyframes tiao{
+	0%{ -moz-transform:translate(0,0)}
+	50%{ -moz-transform:translate(-30px,-30px)}
+	100%{ -moz-transform:translate(0,0)}
+}
+@-o-keyframes tiao{
+	0%{ -o-transform:translate(0,0)}
+	50%{ -o-transform:translate(-30px,-30px)}
+	100%{ -o-transform:translate(0,0)}
+}
+/* 返回顶部 */
+.BackTop{width:37px; height:37px; position:fixed; cursor:pointer; z-index:50000; right:10px; bottom:10px; display:none; background:url("BackTop.jpg")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/BackTop.jpg*/ no-repeat;}
+/* 登录弹框 */
+.loginpop .popbox,.xgmm .popbox{width:500px; padding:20px 30px;}
+.loginpop .subbtn,.xgmm .subbtn{width:212px; line-height:36px; margin-left:106px; text-align:center; background:#f27d16; color:#381a00; font-size:18px; display:block; border-radius:3px;}
+.loginpop .inputdiv,.xgmm .inputdiv{width:500px; height:60px; position:relative;}
+.loginpop .inputdiv p,.xgmm .inputdiv p{float:left; font-size:16px; line-height:30px; width:106px; text-align:right;}
+.loginpop .inputdiv input,.xgmm .inputdiv input{float:left; padding:0 6px; width:200px; border:#d48f16 1px solid; height:30px;}
+.loginpop .inputdiv span,.xgmm .inputdiv span{line-height:20px; position:absolute; left:106px; top:32px;}
+.loginpop .inputdiv span img,.xgmm .inputdiv span img{display:inline-block;}
+.wjmmtips{color:#f00;cursor:pointer;}
+.loginpop .tips,.xgmm .tips{ padding:20px 26px 0;}
+.xgmm .inputdiv p{width:140px;}
+.xgmm .inputdiv span{left:140px;}
+/* 弹框公共样式 */
+.winpop{width:100%; height:100%; position:fixed; top:0; z-index:99; display:none; background:url("blackOpt.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/blackOpt.png*/ repeat;}
+.winpop .close{width:50px; height:50px; position:fixed; z-index:10; right:10px; top:10px; background:url("close.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/close.png*/ no-repeat;}
+.winpop .PopDiv{background:#feb432; left:50%; top:50%; position:absolute;}
+.poptit{height:81px; width:100%; overflow:hidden; background:#feb432; border-bottom:#fec35b 1px solid;}
+.poptit h1{height:80px; width:100%; background:#feb432; line-height:80px; font-size:36px; text-align:center; color:#4a2900; border-bottom:#956619 1px solid;}
+.webmain .poptit h1{border:0 ;}
+.webmain .poptit{border:0 ;}
+.popbox{color:#4b2300; width:900px; padding:40px 50px; font-size:14px; font-family:"\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", sans-serif;}
+.popbox h1{width:100%; background:#feb432; height:60px; line-height:60px; font-size:24px; text-align:center; color:#4a2900;}
+.popbox img{max-width:100%; display:block; margin:0 auto;}
+.popbox h3{font-size:18px; font-weight:bold; line-height:18px; margin-bottom:10px;}
+.popbox p{line-height:22px;}
+.popbtn{width:160px; line-height:36px; margin:40px auto 0; text-align:center; background:#f27d16; color:#381a00; font-size:18px; display:block; border-radius:3px;}
+.popbtn:hover{background:#993300; color:#feb432;}
+/* 户型图 */
+.TabTit{width:100%;}
+.TabTit p{width:150px; line-height:36px; margin:0 10px 10px 0; text-align:center; background:#f27d16; color:#fff; font-size:16px; float:left; cursor:pointer; border-radius:3px;}
+.TabTit p.cur{background:#4b2300;}
+.tabCon .box{display:none;}
+
+/* 开盘公示文件 */
+.kpgswj .popbox a{color:#ff0000; font-size:16px; width:100%; text-align:center; margin:0 auto; line-height:30px; display:block;}
+.kpgswj .popbox a:hover{font-weight:bold;}
+/* 房源公示 */
+.fygs .popbox{padding:30px 20px 50px; width:1300px;}
+.fygs .PopDiv{height:96%; top:2%; overflow-x:hidden; overflow-y:auto;}
+.fygs table{width:100%;}
+.fygs table td{text-align:center; background:#f27d16; font-size:12px; color:#fff;  padding:8px 0;}
+.fygs thead td{background:#f27d16;}
+
+.fygs thead tr:last-child td:nth-child(1),.fygs tbody tr td:nth-child(1){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(2),.fygs tbody tr td:nth-child(2){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(3),.fygs tbody tr td:nth-child(3){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(4),.fygs tbody tr td:nth-child(4){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(5),.fygs tbody tr td:nth-child(5){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(6),.fygs tbody tr td:nth-child(6){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(7),.fygs tbody tr td:nth-child(7){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(8),.fygs tbody tr td:nth-child(8){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(9),.fygs tbody tr td:nth-child(9){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(10),.fygs tbody tr td:nth-child(10){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(11),.fygs tbody tr td:nth-child(11){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(12),.fygs tbody tr td:nth-child(12){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(13),.fygs tbody tr td:nth-child(13){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(14),.fygs tbody tr td:nth-child(14){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(15),.fygs tbody tr td:nth-child(15){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(16),.fygs tbody tr td:nth-child(16){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(17),.fygs tbody tr td:nth-child(17){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(18),.fygs tbody tr td:nth-child(18){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(19),.fygs tbody tr td:nth-child(19){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(20),.fygs tbody tr td:nth-child(20){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(21),.fygs tbody tr td:nth-child(21){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(22),.fygs tbody tr td:nth-child(22){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(23),.fygs tbody tr td:nth-child(23){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(24),.fygs tbody tr td:nth-child(24){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(25),.fygs tbody tr td:nth-child(25){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(26),.fygs tbody tr td:nth-child(26){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(27),.fygs tbody tr td:nth-child(27){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(28),.fygs tbody tr td:nth-child(28){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(29),.fygs tbody tr td:nth-child(29){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(30),.fygs tbody tr td:nth-child(30){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(31),.fygs tbody tr td:nth-child(31){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(32),.fygs tbody tr td:nth-child(32){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(33),.fygs tbody tr td:nth-child(33){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(34),.fygs tbody tr td:nth-child(34){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(35),.fygs tbody tr td:nth-child(35){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(36),.fygs tbody tr td:nth-child(36){background:#b45cbe;}.fygs thead tr:last-child td:nth-child(37),.fygs tbody tr td:nth-child(37){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(38),.fygs tbody tr td:nth-child(38){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(39),.fygs tbody tr td:nth-child(39){background:#9d6f20;}.fygs thead tr:last-child td:nth-child(40),.fygs tbody tr td:nth-child(40){background:#9d6f20;}
+
+
+
+/* 翻页定义 */
+.fenye {height:30px;line-height:30px;font-family:"黑体";font-size:14px;text-align:center;padding:20px}
+.fenye a,.fenye span {padding:5px 10px; background:#dc5d00; color:#fffee5; margin-right:7px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
+.fenye a:hover,.fenye span.current {background:#993300;color:#fffee5;text-decoration:none}
+/* step1、step2、step3 */
+.ReIn{width:50px; height:50px; position:fixed; z-index:10; right:10px; top:10px; background:url("close.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/close.png*/ no-repeat;}
+.bodybg{background:#3f2e00; background-attachment:fixed;}
+.webmain{width:1000px; padding-bottom:50px; min-height:700px; color:#4b2300; font-size:14px; background:#feb432; margin:0 auto;}
+.title{width:100%; height:62px; padding:20px 0; background:#feb432; border-bottom:#956619 1px solid;}
+.titlebox{width:720px; height:100%; margin:0 auto;}
+.title p{width:120px; height:100%; float:left; text-align:center; line-height:62px; color:#4a2900; font-size:24px;}
+.title p.t01{background:url("01.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/01.png*/ no-repeat center;}
+.title p.t02{background:url("02.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/02.png*/ no-repeat center;}
+.title p.t03{background:url("03.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/03.png*/ no-repeat center;}
+.title p.t04{background:url("04.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/04.png*/ no-repeat center;}
+.title p.t05{background:url("05.png")/*tpa=http://www.kaipan01.cn/xhl/2017/buyhousetest1217zxcv3452/images/bg/05.png*/ no-repeat center;}
+.title img{float:left; margin-top:20px;}
+.webmain h1{height:80px; width:100%; background:#feb432; line-height:80px; font-size:36px; text-align:center; color:#4a2900; border-top:#fec35b 1px solid;}
+.step1Rgxz{padding:30px 50px; font-family:"\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", sans-serif;}
+.step1Rgxz h3{font-size:18px; font-weight:bold; line-height:18px; margin-bottom:10px;}
+.step1Rgxz p{line-height:22px;}
+.step1Rgxz img{display:block; margin:10px auto; max-width:100%;}
+.nextbtn{width:80%; height:36px; display:block; line-height:36px; text-align:center; background:#f27d16; font-size:16px; border-radius:5px; color:#fff; margin:30px auto 0;}
+.nextbtn:hover{background:#993300;}
+.step2Sfqr{padding:30px 50px;}
+.step2Sfqr .infodiv{width:360px; border:1px solid #dc9416; background:#ffe474; height:36px; margin:0 auto 20px;}
+.step2Sfqr .infodiv p{text-align:right; float:left; line-height:36px; width:100px; font-size:16px;}
+.step2Sfqr .infodiv span{float:left; line-height:36px; height:36px; width:190px; display:block; font-size:16px;}
+
+
+
+.step2Sfqr .infodiv2{width:360px; height:36px; margin:0 auto 20px;}
+.step2Sfqr .infodiv2 p{ float:left; line-height:36px; width:150px; font-size:16px;}
+.step2Sfqr .infodiv2 input{text-align:center; float:left;  width:60px; height:36px; font-size:20px;}
+.step2Sfqr .infodiv2 img{ height:36px; }
+.step2Sfqr .infodiv2 span{ line-height:36px; height:18px; display:block; font-size:18px;}
+
+.webmainstep1 img {max-width:100%; display:block; margin:0 auto;}
+
+
+.linkbtn{width:300px; margin:0 auto;}
+.linkbtn a{width:140px; height:36px; display:block; line-height:36px; text-align:center; background:#f27d16; font-size:16px; border-radius:5px; color:#fff; margin:0 auto;}
+.linkbtn a:hover{background:#993300;}
+.step3Fyfb{padding:30px 50px;}
+.step3Fyfb .houselist{width:560px; margin:0 auto;}
+.step3Fyfb .houselist li{width:260px; float:left; margin:0 10px 20px 10px;}
+.step3Fyfb .houselist li p{width:100%; border:1px solid #dc9416; background:#ffe474; text-align:center; line-height:36px; margin:0 auto 5px; font-size:16px;}
+.step3Fyfb .houselist li p font{color:#f00; font-size:24px;}
+.step3Fyfb .houselist li a{width:100%; height:36px; display:block; line-height:36px; text-align:center; background:#993300; font-size:16px; border-radius:5px; color:#fff; margin:0 auto;}
+.step3Fyfb .houselist li a:hover{background:#f27d16;}
+/* 秒杀房源 */
+.WebCountDown{height:50px; line-height:50px; padding:10px 0; font-size:24px; text-align:center;}
+.WebCountDown .number{font-size:48px; padding:0 6px; font-weight:bold;}
+.FixedDiv{padding:0 30px; height:166px; background:#feb432; position:relative;}
+.housetit{background:#feb432;}
+.housetit .tips{float:left; height:30px; padding-top:14px;}
+.housetit .tips p{float:left; line-height:30px; border-radius:4px; padding:0 5px; color:#fff; margin-right:10px;}
+.housetit .WebCountDown{float:right; padding:0;}
+.titbox a{width:140px; line-height:36px; margin:0 15px 10px 0; text-align:center; background:#f27d16; color:#fff; font-size:16px; float:left; display:block; border-radius:3px;}
+.titbox a.cur,.titbox a:hover{background:#4b2300;}
+.housetable{padding:45px 30px; font-family:"\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", sans-serif;}
+.housetable table{width:100%;}
+.housetable table td{text-align:center; vertical-align:middle; line-height:20px; background:#f27d16; font-size:12px; color:#fff; padding:8px 0;}
+.housetable thead td{background:#f27d16;}
+.housetable thead tr:first-child td{background:#bc5d09; font-size:22px;}
+.housetable thead tr:last-child td{background:#fff; color:#4b2300;}
+.housetable table td span{display:block; cursor:pointer; width:44px; text-align:center; font-size:10px; margin:0 auto; border-radius:4px;}
+/* 确认认购 */
+.qrrg .houselist{width:840px; margin:20px auto 0;}
+.qrrg .houselist li{width:400px; float:left; margin:0 10px 20px 10px;}
+.qrrg .houselist li .infodiv{width:398px; border:1px solid #dc9416; background:#ffe474; height:36px; margin:0 auto 5px;}
+.qrrg .houselist li .infodiv p{text-align:right; float:left; line-height:36px; width:200px; font-size:16px;}
+.qrrg .houselist li .infodiv span{float:left; line-height:36px; height:36px; width:190px; display:block; font-size:16px;}
+
+

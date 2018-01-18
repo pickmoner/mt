@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>验证码示例</title>
+  <script src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+    <div id="captcha"></div> <!-- 验证码容器元素 -->
+  //<script src="http://cstaticdun.126.net/load.min.js"></script> <!-- 初始化JS -->
+  <script>
+    initNECaptcha({
+      //captchaId: '9ae903e15c784c5999981d7f45e52afa',
+			captchaId: '',
+      element: '#captcha',
+      mode: 'float',
+      width: 320
+    }, function onload (instance) {
+      // 初始化成功后，用户输入对应用户名和密码，以及完成验证后，直接点击登录按钮即可
+      alert('a');
+    }, function onerror (err) {
+      // 验证码初始化失败处理逻辑，例如：提示用户点击按钮重新初始化
+    })
+  </script>
+</body>
+</html>
